@@ -1,0 +1,407 @@
+/* MODAL */
+.modal {
+    display: none; /* Κρυφό από προεπιλογή */
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(21, 19, 19, 0.5); 
+}
+
+.modal-content {
+    background-color: #edecec;
+    margin: 10% auto; 
+    padding: 1rem;
+    border-radius: 5px;
+    width: 90%; 
+    max-width: 500px; 
+    position: relative;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.open-modal {
+    padding: 0.5rem 1rem;
+    background-color: #8c52ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*HEADER*/
+.header-actions .register-btn {
+   background: #333; 
+    color: white;
+  border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 20px;
+     margin-right: 10px;
+}
+
+
+.header-actions .login-btn:hover {
+    background:  linear-gradient(90deg, #8a2be2, #00e5ff);
+}
+.header-actions .login-btn {
+    background: #333;
+    color: white;
+    border:1px solid white;
+    padding: 8px 20px;
+    border-radius: 20px; 
+    margin-right: 10px;
+}
+
+.header-actions .register-btn:hover {
+    background:  linear-gradient(90deg, #8a2be2, #00e5ff);;
+}
+
+
+.header-actions .divider {
+    color: #fff;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+/* Menu αρχικά κρυφό (mobile) */
+#main-nav {
+    position: relative;
+}
+
+#main-nav .menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #e0e0e0;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+}
+
+#main-nav .menu li a:hover {
+    color: #00e5ff; 
+    background-color: rgba(0, 229, 255, 0.1); 
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.6); 
+}
+
+/* Hamburger hidden on desktop */
+
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+/* INDEX PAGE*/
+
+/*κουμπι hero*/
+.hero-cta {
+    display: inline-block;
+    background: #8c52ff;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.hero-cta:hover {
+    background: #8c52ff;
+    transform: translateY(-2px);
+}
+.category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+.category-card {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+/* περιεχόμενο πάνω από το overlay */
+.category-card * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* COURSES PAGE */
+.page-title {
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters input,
+.filters select {
+    background-color: #f0f4ff; /* απαλή μπλε απόχρωση */
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    padding: 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.unavailable {
+    color: red;
+    font-weight: bold;
+}
+
+
+/*book filters*/
+.book-list{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.book-card{
+ padding: 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+/*video list*/
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+
+.video-card {
+  flex:0 0 300px;        /* σταθερό πλάτος κάθε κάρτας */
+  min-width: 250px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.banner-btn {
+    display: block;
+    width: 200px;          /* Σταθερό πλάτος για πιο συνεπή εμφάνιση */
+    padding: 12px 20px;
+    margin: 20px auto 0 auto;  /* Κεντράρει οριζόντια */
+    background: linear-gradient(90deg, #8c52ff, #5ce1e6);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.banner-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+/* FORMS (REGISTER / LOGIN) */
+
+/* Inputs */
+.form-card input,
+.form-card select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Focus */
+.form-card input:focus,
+.form-card select:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 4px rgba(74,108,247,0.4);
+    outline: none;
+}
+
+
+
+/* ===== CATEGORY BACKGROUNDS ===== */
+.category-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-color: #8c52ff;
+}
+
+.category-card .icon {
+    width: 140px;
+    height: 70px;
+    margin: 0 auto 15px;
+    color: #ffffff;
+}
+
+.category-card svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* overlay για να διαβάζεται το κείμενο */
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.1);
+  z-index: 0;
+}
+
+.networks {
+  background-image: url("../images/net.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.sequrity {
+  background-image: url("../images/security.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.database {
+  background-image: url("../images/database.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.programming {
+  background-image: url("../images/coding.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ABOUT US PAGE*/
+.team-intro {
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 12px;
+}
+
+.team-members {
+    position: relative;
+    padding: 80px 20px;
+    background-image: url("../images/workplace.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+}
+
+.team-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 12px;
+}
+.member-cards {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.member-card h4 {
+    margin: 10px 0 5px;
+}
+.member-card {
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 2;
+    width: 220px;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+}
+
+.member-card img {
+    border-radius: 50%;
+}
+.contact-info {
+    text-align: center;
+    border-radius: 12px;
+}
+
